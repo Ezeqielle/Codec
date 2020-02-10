@@ -4,8 +4,8 @@
 # Script name: codec
 # Description: programme avec Clé de chiffrement matricielle
 # Made by: Ezeqielle
-# Begin: 14/12/2019
-# End: 11/01/2020
+# Begin: 10/02/2020
+# End:
 
 # /!\ ne pas oublier d'enlever les print() de debug a la fin /!\
 # Add creation de matrice
@@ -37,8 +37,7 @@ def getMatrix():
     matrix = matrix.split('[')[1].split(']')[0]
     matrix = matrix.replace(' ', '')
 
-    matrixArray = []
-    matrixArray.append(list(matrix[:8]))
+    matrixArray = [list(matrix[:8])]
     matrixArray[0] = [int(count) for count in matrixArray[0]]
     matrixArray.append(list(matrix[8:16]))
     matrixArray[1] = [int(count) for count in matrixArray[0]]
